@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding-top: 100px;
+}
+main {
+    width: 100vw;
+}
+video {
+    margin: 0 auto;
+}
