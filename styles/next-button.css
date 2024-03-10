@@ -1,0 +1,40 @@
+
+.next-buttons {
+    position: absolute;
+    height: 800px;
+    width: 80px;
+    top: 50px;
+    left: 1480px;
+    background-color:rgb(124, 21, 145) ;
+    color: rgb(110, 22, 128);
+    border: none;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomright: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    font-size: 60px;
+    font-family: 'Robotic', sans-serif;
+    
+}
+.next-buttons:not(:disabled) {
+    color: rgb(255, 255, 255);
+}
+.next-buttons:not(:disabled):hover {
+    background-color: rgb(41, 170, 80);
+    cursor: pointer;
+
+}
+
+.next-buttons:disabled {
+    cursor: not-allowed;
+}

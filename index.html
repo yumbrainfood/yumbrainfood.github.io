@@ -4,16 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="styles/next-button.css" />
+    <link rel="stylesheet" type="text/css" href="styles/prompt.css" />
+    <script type="module" src="scripts/script.js"></script>
     <title>BRAIN FOOD</title>
 </head>
 <body>
-    <main>
-        
-        <!-- autoplay mode ///  controls can be hidden -->
-        <video width="1280" height="720" controls>
-            <source src="assets/Editor[3].mp4" type="video/mp4">
-        </video>
+    <!-- ----------------------prologue---------------------- -->
+    <main class="canvas" id="canvas1">
+      <video id="video1" width="1440" height="800" controls>
+        <source src="assets/headset.mp4" type="video/mp4">
+      </video>
+      
+      <button id="next-button1" class="next-buttons" disabled>NEXT</button>
     </main>
+
+
+    <!-- ----------------------pre scene 1---------------------- -->
+    <main class="canvas" id="canvas2">
+      <video  id="video2" width="1440" height="800" controls>
+        <source src="assets/openingdoor.mp4" type="video/mp4">
+      </video>
+      
+      <button id="next-button2" class="next-buttons" disabled>NEXT</button>
+
+      <div class="prompt-div" id="prompt-box">
+        <h3 class="prompt">Ready to start the day?</h3>
+
+        <div class="prompt-choice-divs">
+          <button class="prompt-choice" id="canvas2-yes">Yes</button>
+          <!--<p class="prompt-choice">No </p> -->
+
+        </div>
+       
+      </div>
+    </main>
+
+    <!-- ----------------------scene 1 walking down the train station and missing the train ---------------------- -->
+
+
+  
+
 
     
 </body>

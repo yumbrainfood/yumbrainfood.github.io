@@ -1,0 +1,44 @@
+#prompt-box {
+    font-family: 'EightBit', sans-serif;
+
+    z-index: 9;
+    color: white;
+    position: absolute;
+    top: 550px;
+    left: 300px;
+    background-color: rgba(76, 92, 77, 0.637);
+    width: 1000px;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    display: none;
+}
+
+.prompt {
+    margin-left: 20px;
+}
+.prompt-choice {
+    width: 50%;
+    text-wrap: wrap;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgb(171, 192, 171);
+    font-size: 18px;
+    font-family: 'EightBit', sans-serif;
+}
+.prompt-choice:hover {
+    background-color: rgb(41, 170, 80);
+    cursor: pointer;
+}
+
+.prompt-choice-divs {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
