@@ -1,4 +1,4 @@
-#prompt-box {
+.prompt-div {
     font-family: 'EightBit', sans-serif;
 
     z-index: 9;
@@ -6,7 +6,7 @@
     position: absolute;
     top: 550px;
     left: 300px;
-    background-color: rgba(76, 92, 77, 0.637);
+    background-color: rgba(0, 84, 231,0.637) ;
     width: 1000px;
     border-radius: 10px;
 
@@ -23,12 +23,13 @@
     margin-left: 20px;
 }
 .prompt-choice {
-    width: 50%;
+    max-width: 50%;
+    min-width: 20%;
     text-wrap: wrap;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid rgb(171, 192, 171);
+
     font-size: 18px;
     font-family: 'EightBit', sans-serif;
 }
