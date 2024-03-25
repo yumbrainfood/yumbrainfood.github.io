@@ -24,6 +24,8 @@
 
     font-size: 60px;
     font-family: 'Robotic', sans-serif;
+
+    letter-spacing: -6px;
     
 }
 .next-buttons:not(:disabled) {

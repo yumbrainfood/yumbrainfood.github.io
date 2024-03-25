@@ -57,6 +57,15 @@ video {
   z-index: 7;
 }
 
+#video5 {
+  z-index: 6;
+}
+
+
+#video {
+  z-index: 5;
+}
+
 
 #next-button1 {
     z-index: 10;
@@ -71,4 +80,12 @@ video {
 
 #next-button4 {
   z-index: 7;
+}
+
+#next-button5 {
+  z-index:6;
+}
+
+#next-button6 {
+  z-index: 5;
 }

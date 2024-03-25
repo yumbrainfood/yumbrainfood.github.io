@@ -36,7 +36,7 @@
         <h3 class="prompt">Ready to start the day?</h3>
 
         <div class="prompt-choice-divs">
-          <button class="prompt-choice" id="canvas2-yes">Yes</button>
+          <button class="prompt-choice" id="canvas2-yes">Yes.</button>
           <!--<p class="prompt-choice">No </p> -->
 
         </div>
@@ -63,15 +63,21 @@
           <!--<p class="prompt-choice">No </p> -->
         </div>
 
-        <h1 id="prompt3-good-noti">Dear User, You’ve appeared to have made the decision that made your mind stronger. Your stats have not changed. 
+        <h1 id="prompt3-good-noti" class="notification-any-text">
+          <span class="notification-text">Notification</span>
+          <br>
+          Dear User, You’ve appeared to have made the decision that made your mind stronger. Your stats have not changed. 
         </h1>
 
-        <h1 id="prompt3-bad-noti">Dear User, This choice of thought has damaged your psyche. Please be aware that your screen may be darker as your reality is determined by the state of your mind.
+        <h1 id="prompt3-bad-noti" class="notification-any-text">
+          <span class="notification-text">Notification</span>
+          <br>
+          Dear User, This choice of thought has damaged your psyche. Please be aware that your screen may be darker as your reality is determined by the state of your mind.
         </h1>
       </div>
     </main>
   
-    <!-- ----------------------scene 4 walking down the train station and missing the train ---------------------- -->
+    <!-- ----------------------scene 4 no class ---------------------- -->
 
     <main class="canvas" id="canvas4">
       <video  id="video4" width="1440" height="800" controls>
@@ -90,15 +96,82 @@
           <!--<p class="prompt-choice">No </p> -->
         </div>
 
-        <h1 id="prompt4-good-noti">Dear User, this thought, filled with gratitude and optimism, has increased your psyche. Well done.
+        <h1 id="prompt4-good-noti" class="notification-any-text">
+          <span class="notification-text">Notification</span>
+          <br>
+          Dear User, this thought, filled with gratitude and optimism, has increased your psyche. Well done.
         </h1>
 
-        <h1 id="prompt4-bad-noti"> Dear User, This reaction has damaged your mind greatly. The act of feeding your mind resentment and anger has caused your psyche to decrease.
+        <h1 id="prompt4-bad-noti" class="notification-any-text">           
+          <span class="notification-text">Notification</span>
+          <br>
+          Dear User, This reaction has damaged your mind greatly. The act of feeding your mind resentment and anger has caused your psyche to decrease.
 
         </h1>
       </div>
     </main>
 
+
+   <!-- ----------------------scene 5 no food ---------------------- -->
+
+   <main class="canvas" id="canvas5">
+    <video  id="video5" width="1440" height="800" controls>
+      <source src="assets/headset.mp4" type="video/mp4">
+    </video>
     
+    <button id="next-button5" class="next-buttons" disabled>NEXT</button>
+
+    <div class="prompt-div" id="prompt-box5">
+      <h3 class="prompt">It seems that the fridge has nothing that your appetite is craving. Reaction is required for this event.
+      </h3>
+
+
+      <div class="prompt-choice-divs">
+        <button class="prompt-choice" id="canvas5-good">I’m grateful that at least there's stuff in there to eat. </button>
+        <button class="prompt-choice" id="canvas5-bad" >There’s literally nothing to eat. I’m just going to die i guess.</button>
+        
+      </div>
+
+      <h1 id="prompt5-good-noti" class="notification-any-text">
+        <span class="notification-text">Notification</span>
+        <br>
+        Dear User, appreciating what you have is a healthy mindset to have. Your mind thanks you for feeding it positivity and gratitude.
+
+      </h1>
+
+      <h1 id="prompt5-bad-noti" class="notification-any-text">           
+        <span class="notification-text">Notification</span>
+        <br>Dear User, pessimistic exaggeration is a deadly combo. As a result of feeding your psyche these negative emotions, it has decreased drastically.
+
+      </h1>
+    </div>
+  </main>
+
+
+<!-- ----------------------scene 6 end day ---------------------- -->
+
+
+ <main class="canvas" id="canvas6">
+  <video  id="video6" width="1440" height="800" controls>
+    <source src="assets/misstrain.mp4" type="video/mp4">
+  </video>
+  
+  <button id="next-button6" class="next-buttons" disabled></button>
+
+  <div class="prompt-div" id="prompt-box6">
+    <h3 class="prompt"> Dear User, your day has ended. The Vision Pro will now stop tracking your behavior and patterns. The results of your day will now show. 
+
+    </h3>
+
+
+    <div class="prompt-choice-divs">
+      <button class="prompt-choice" id="canvas6-good">Show Results. </button>
+    </div>
+
+  </div>
+</main>
+
+
+
 </body>
 </html>

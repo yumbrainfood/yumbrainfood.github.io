@@ -125,14 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
   nextButton3.addEventListener('click', function() {
     canvas3.style.display = 'none';
     video3.style.display = 'none';
-    nextButton3.style.display = 'none'; // 'this' refers to nextButton1
+    nextButton3.style.display = 'none'; 
     promptBox3.style.display = 'none';
 
   });
 });
 
 
-// CLASS CANCELLED SCENE 34 -------------------------------------------------------------------
+// CLASS CANCELLED SCENE 4 -------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
   var canvas4 = document.getElementById('canvas4')
@@ -184,8 +184,112 @@ document.addEventListener('DOMContentLoaded', function() {
   nextButton4.addEventListener('click', function() {
     canvas4.style.display = 'none';
     video4.style.display = 'none';
-    nextButton4.style.display = 'none'; // 'this' refers to nextButton1
+    nextButton4.style.display = 'none';
     promptBox4.style.display = 'none';
 
   });
 });
+
+
+
+// No FOOD SCENE 5 -------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  var canvas5 = document.getElementById('canvas5')
+  var video5 = document.getElementById('video5');
+  var nextButton5 = document.getElementById('next-button5');
+
+  var goodButton5 = document.getElementById('canvas5-good');
+  var badButton5 = document.getElementById('canvas5-bad');
+  var promptBox5 = document.getElementById('prompt-box5');
+
+  var goodnoti5 = document.getElementById('prompt5-good-noti')
+  var badnoti5 = document.getElementById('prompt5-bad-noti')
+
+  // Event listener for video ending
+  video5.addEventListener('ended', function() {
+    var prompt5 = document.getElementById('prompt-box5')
+    //shows the prompt
+    prompt5.style.display = 'flex'
+
+  });
+
+
+    // Add click event listener to the Yes button----------------------------------------
+    goodButton5.addEventListener('click', function() {
+      goodButton5.style.display = 'none';
+      badButton5.style.display = 'none';
+      
+      goodnoti5.style.display = 'initial';
+
+      // Enable the next button
+      nextButton5.removeAttribute('disabled');
+  });
+
+    // Add click event listener to the No button--------------------------------
+    badButton5.addEventListener('click', function() {
+      goodButton5.style.display = 'none';
+      badButton5.style.display = 'none';
+
+      //filter 
+      incrementOpacity(filter);
+
+      badnoti5.style.display = 'initial';
+
+      // Enable the next button
+      nextButton5.removeAttribute('disabled');
+  });
+
+  // clears the scenario when you click NEXT
+  nextButton5.addEventListener('click', function() {
+    canvas5.style.display = 'none';
+    video5.style.display = 'none';
+    nextButton5.style.display = 'none'; 
+    promptBox5.style.display = 'none';
+
+  });
+});
+
+
+
+
+// lay down SCENE 6 -------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  var canvas6 = document.getElementById('canvas6')
+  var video6 = document.getElementById('video6');
+  var nextButton6 = document.getElementById('next-button6');
+
+  var yesButton6 = document.getElementById('canvas6-good');
+  var promptBox6 = document.getElementById('prompt-box6');
+
+  // Event listener for video ending
+  video6.addEventListener('ended', function() {
+    var prompt6 = document.getElementById('prompt-box6')
+    //shows the prompt
+    prompt6.style.display = 'flex'
+
+  });
+
+
+    // Add click event listener to the Yes button
+  yesButton6.addEventListener('click', function() {
+      // Hide the choice box
+      yesButton6.style.display = 'none';
+      // Enable the next button
+      nextButton6.removeAttribute('disabled');
+      nextButton6.textContent = "RESULTS";
+  });
+
+  // clears the scenario when you click NEXT
+  nextButton6.addEventListener('click', function() {
+    canvas6.style.display = 'none';
+    video6.style.display = 'none';
+    nextButton6.style.display = 'none'; // 'this' refers to nextButton1
+    promptBox6.style.display = 'none';
+
+  });
+});
+
+
+
