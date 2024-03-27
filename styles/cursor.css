@@ -1,0 +1,25 @@
+.cursor-dot {
+    width:0px;
+    height: 0px;
+    background-color: white;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 3px solid hsla(0, 0%, 100%, 1);
+    
+    mix-blend-mode: hard-light;
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}

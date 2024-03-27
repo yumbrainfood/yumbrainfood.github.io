@@ -32,12 +32,17 @@
 
     font-size: 18px;
     font-family: 'EightBit', sans-serif;
+
+
+
 }
 .prompt-choice:hover {
-    background-color: rgb(41, 170, 80);
-    color: white;
-    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+    transition: 0.5s ease-in-out;
+
 }
+
 
 .prompt-choice-divs {
     display: flex;

@@ -1,3 +1,43 @@
+const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.hoverable');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+  TweenMax.to($bigBall, .4, {
+    x: e.pageX - 15,
+    y: e.pageY - 15
+  })
+  TweenMax.to($smallBall, .1, {
+    x: e.pageX - 5,
+    y: e.pageY - 7
+  })
+}
+
+// Hover an element
+function onMouseHover() {
+  TweenMax.to($bigBall, .3, {
+    scale: 4
+  })
+}
+function onMouseHoverOut() {
+  TweenMax.to($bigBall, .3, {
+    scale: 1
+  })
+}
+
+
+
+
+var goodchoices = 0;
+var badchoices = 0;
 
 var filter = document.getElementById('filter')
 function incrementOpacity(element) {
@@ -24,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listener for video ending
   video1.addEventListener('ended', function() {
     nextButton1.removeAttribute('disabled');
+    nextButton1.style.display = 'initial'
+    nextButton1.textContent = "next";
   });
 
   // Event listener for button click
@@ -51,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //shows the prompt
     prompt.style.display = 'flex'
 
+
   });
 
 
@@ -60,6 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
       yesButton.style.display = 'none';
       // Enable the next button
       nextButton2.removeAttribute('disabled');
+      nextButton2.textContent = "next";
+
+      nextButton2.style.display = 'initial'
+      nextButton2.textContent = "next";
   });
 
   // clears the scenario when you click NEXT
@@ -93,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //shows the prompt
     prompt3.style.display = 'flex'
 
+
   });
 
 
@@ -105,6 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton3.removeAttribute('disabled');
+      goodchoices++;
+
+      nextButton3.style.display = 'initial'
+      nextButton3.textContent = "next";
   });
 
     // Add click event listener to the No button--------------------------------
@@ -119,6 +171,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton3.removeAttribute('disabled');
+      badchoices++;
+
+      nextButton3.style.display = 'initial'
+      nextButton3.textContent = "next";
   });
 
   // clears the scenario when you click NEXT
@@ -164,6 +220,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton4.removeAttribute('disabled');
+      goodchoices++;
+
+      nextButton4.style.display = 'initial';
+      nextButton4.textContent = "next";
   });
 
     // Add click event listener to the No button--------------------------------
@@ -178,6 +238,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton4.removeAttribute('disabled');
+      badchoices++;
+
+      nextButton4.style.display = 'initial';
+      nextButton4.textContent = "next";
   });
 
   // clears the scenario when you click NEXT
@@ -224,6 +288,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton5.removeAttribute('disabled');
+      goodchoices++;
+
+      nextButton5.style.display = 'initial';
+      nextButton5.textContent = "next";
   });
 
     // Add click event listener to the No button--------------------------------
@@ -238,6 +306,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Enable the next button
       nextButton5.removeAttribute('disabled');
+      badchoices++;
+
+      nextButton5.style.display = 'initial';
+      nextButton5.textContent = "next";
   });
 
   // clears the scenario when you click NEXT
@@ -256,12 +328,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // lay down SCENE 6 -------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
-  var canvas6 = document.getElementById('canvas6')
+  var canvas6 = document.getElementById('canvas6');
   var video6 = document.getElementById('video6');
   var nextButton6 = document.getElementById('next-button6');
 
   var yesButton6 = document.getElementById('canvas6-good');
   var promptBox6 = document.getElementById('prompt-box6');
+
+
+  var canvas7 = document.getElementById('canvas7');
+  var canvas7message1 = document.getElementById('canvas7-message1');
+  var canvas7message2 = document.getElementById('canvas7-message2');
+  var canvas7message3 = document.getElementById('canvas7-message3');
+  var canvas7message4 = document.getElementById('canvas7-message4');
+  var canvas7message5 = document.getElementById('canvas7-message5');
 
   // Event listener for video ending
   video6.addEventListener('ended', function() {
@@ -278,17 +358,64 @@ document.addEventListener('DOMContentLoaded', function() {
       yesButton6.style.display = 'none';
       // Enable the next button
       nextButton6.removeAttribute('disabled');
-      nextButton6.textContent = "RESULTS";
+      nextButton6.textContent = "next";
+
+      nextButton6.style.display = 'initial'
   });
 
   // clears the scenario when you click NEXT
   nextButton6.addEventListener('click', function() {
     canvas6.style.display = 'none';
     video6.style.display = 'none';
-    nextButton6.style.display = 'none'; // 'this' refers to nextButton1
+    nextButton6.style.display = 'none';
     promptBox6.style.display = 'none';
 
-  });
+    setTimeout(function() {
+        canvas7.style.display = 'initial';
+        canvas7message1.style.display = 'block';
+    }, 1000); 
+    setTimeout(function() {
+      canvas7message2.style.display = 'block';
+    }, 3000); 
+    setTimeout(function() {
+      canvas7message3.style.display= 'block';
+      canvas7message3.textContent = `Number of Good Thoughts : ${goodchoices}`;
+    }, 5000); 
+    setTimeout(function() {
+      canvas7message4.style.display= 'block';
+      canvas7message4.textContent = `Number of Bad Thoughts : ${badchoices}`;
+    }, 7000); 
+
+    if (goodchoices === 0) {
+      setTimeout(function() {
+        canvas7message5.style.display= 'block';
+        canvas7message5.textContent = `You chose ${goodchoices} reactions that were good for your mind. The mind visualizer pro was created to help individuals make better decisions. Please continue to use our software so that you’re able to master your thoughts.`;
+      }, 9000); 
+    }
+
+    if (goodchoices === 1) {
+      setTimeout(function() {
+        canvas7message5.style.display= 'block';
+        canvas7message5.textContent = `You chose ${goodchoices} reaction that were good for your mind. The mind visualizer pro was created to help individuals make better decisions. Continued usage of our software is recommended so that you’re able to master your thoughts.`;
+      }, 9000); 
+    }
+
+    if (goodchoices === 2) {
+      setTimeout(function() {
+        canvas7message5.style.display= 'block';
+        canvas7message5.textContent = `You chose ${goodchoices} reactions that were good for your mind. The mind visualizer pro was created to help individuals make better decisions. You are on the right track. `;
+      }, 9000); 
+    }
+
+    if (goodchoices === 3) {
+      setTimeout(function() {
+        canvas7message5.style.display= 'block';
+        canvas7message5.textContent = `You chose ${goodchoices} reactions that were good for your mind. The mind visualizer pro was created to help individuals make better decisions. Considering your credible ability to distinguish between good and bad thoughts, we recommend you to help others that may benefit from our solutions.`;
+      }, 9000); 
+    }
+
+
+});
 });
 
 

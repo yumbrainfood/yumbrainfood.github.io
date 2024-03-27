@@ -7,20 +7,40 @@
     <link rel="stylesheet" type="text/css" href="styles/next-button.css" />
     <link rel="stylesheet" type="text/css" href="styles/prompt.css" />
     <link rel="stylesheet" type="text/css" href="styles/notification.css" />
+    <link rel="stylesheet" type="text/css" href="styles/cursor.css" />
     <script type="module" src="scripts/script.js"></script>
+    <script type="module" src="scripts/cursor.js"></script>
     <title>BRAIN FOOD</title>
 </head>
 <body>
-  <div id="filter">
 
+  <div id="filter"></div>
+
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
   </div>
+  
+
     <!-- ----------------------prologue---------------------- -->
     <main class="canvas" id="canvas1">
       <video id="video1" width="1440" height="800" controls>
         <source src="assets/headset.mp4" type="video/mp4">
       </video>
       
-      <button id="next-button1" class="next-buttons" disabled>NEXT</button>
+      <button id="next-button1" class="next-buttons" disabled></button>
     </main>
 
 
@@ -30,7 +50,7 @@
         <source src="assets/openingdoor.mp4" type="video/mp4">
       </video>
       
-      <button id="next-button2" class="next-buttons" disabled>NEXT</button>
+      <button id="next-button2" class="next-buttons" disabled></button>
 
       <div class="prompt-div" id="prompt-box">
         <h3 class="prompt">Ready to start the day?</h3>
@@ -51,7 +71,7 @@
         <source src="assets/misstrain.mp4" type="video/mp4">
       </video>
       
-      <button id="next-button3" class="next-buttons" disabled>NEXT</button>
+      <button id="next-button3" class="next-buttons" disabled></button>
 
       <div class="prompt-div" id="prompt-box3">
         <h3 class="prompt">You’ve just missed the train. Reaction is required for this event.</h3>
@@ -84,7 +104,7 @@
         <source src="assets/classcancelled.mp4" type="video/mp4">
       </video>
       
-      <button id="next-button4" class="next-buttons" disabled>NEXT</button>
+      <button id="next-button4" class="next-buttons" disabled></button>
 
       <div class="prompt-div" id="prompt-box4">
         <h3 class="prompt">You’ve just missed the train. Reaction is required for this event.</h3>
@@ -116,10 +136,10 @@
 
    <main class="canvas" id="canvas5">
     <video  id="video5" width="1440" height="800" controls>
-      <source src="assets/headset.mp4" type="video/mp4">
+      <source src="assets/emptyfridge.mp4" type="video/mp4">
     </video>
     
-    <button id="next-button5" class="next-buttons" disabled>NEXT</button>
+    <button id="next-button5" class="next-buttons" disabled></button>
 
     <div class="prompt-div" id="prompt-box5">
       <h3 class="prompt">It seems that the fridge has nothing that your appetite is craving. Reaction is required for this event.
@@ -153,7 +173,7 @@
 
  <main class="canvas" id="canvas6">
   <video  id="video6" width="1440" height="800" controls>
-    <source src="assets/misstrain.mp4" type="video/mp4">
+    <source src="assets/endday.mp4" type="video/mp4">
   </video>
   
   <button id="next-button6" class="next-buttons" disabled></button>
@@ -169,6 +189,18 @@
     </div>
 
   </div>
+</main>
+
+<main id="canvas7">
+  <h1 class="final-message" id="canvas7-message1">Its important to take care of your mind.</h1>
+  <br>
+  <h2 class="final-message" id="canvas7-message2">Here are your results.</h2>
+  <br>
+  <h2 class="final-message" id="canvas7-message3"></h2>
+  <br>
+  <h2 class="final-message" id="canvas7-message4"></h2>
+  <br>
+  <h2 class="final-message" id="canvas7-message5"></h2>
 </main>
 
 

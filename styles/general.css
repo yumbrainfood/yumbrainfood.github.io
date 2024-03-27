@@ -23,13 +23,14 @@
 * {
     margin: 0px;
     padding: 0px;
+    cursor:none; 
 }
 
 
 body {
     background-color: rgb(0, 0, 0);
     overflow: hidden;
-   
+
 }
 .canvas {
     position: relative;
@@ -88,4 +89,30 @@ video {
 
 #next-button6 {
   z-index: 5;
+}
+
+#canvas-7 {
+  z-index: 4;
+
+  width: 400px;
+  height: 100vh;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  
+  text-align: center;
+
+
+  
+}
+
+.final-message {
+  display: none;
+  color: white;
+  
+  width: 600px;
+  margin: 0 auto;
+ 
+  text-align: center;
 }

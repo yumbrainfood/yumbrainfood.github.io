@@ -1,42 +1,65 @@
 
 .next-buttons {
     position: absolute;
-    height: 800px;
+    height: 80px;
     width: 80px;
-    top: 50px;
-    left: 1480px;
+    top: 400px;
+    left: 1350px;
     background-color:#0054E7 ;
     color: white;
     border: none;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+    border-radius: 100px;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
     
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    -webkit-border-top-right-radius: 50px;
-    -webkit-border-bottom-right-radius: 50px;
-    -moz-border-radius-topright: 50px;
-    -moz-border-radius-bottomright: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
 
-    font-size: 60px;
+    font-size: 22px;
     font-family: 'Robotic', sans-serif;
 
-    letter-spacing: -6px;
+
+
     
 }
 .next-buttons:not(:disabled) {
     color: rgb(255, 255, 255);
 }
 .next-buttons:not(:disabled):hover {
-    background-color: rgb(41, 170, 80);
-    cursor: pointer;
+    color: black;
+    background-color: rgb(220, 225, 230);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+    transition: 0.5s ease-in-out;
+
 
 }
 
 .next-buttons:disabled {
     cursor: not-allowed;
+}
+
+#next-button1 {
+    display: none;
+}
+
+#next-button2 {
+    display: none;
+}
+
+#next-button3 {
+    display: none;
+}
+
+#next-button4 {
+    display: none;
+}
+
+#next-button5 {
+    display: none;
+}
+
+#next-button6 {
+    display: none;
 }
